@@ -34,8 +34,12 @@ public abstract class AbstractPurchase implements Comparable<AbstractPurchase> {
         this.number = number;
     }
 
+    protected abstract Byn getFinalCost(Byn baseCost);
+
     public Byn getCost() {
-        return new Byn(product.getPrice().mul(number));
+        Byn baseCost = product.getPrice().mul(number);
+        Byn finalCost = getFinalCost(baseCost);
+        return finalCost.round(RoundMethod.FLOOR, 2);
     }
 
     protected String fieldsToString() {

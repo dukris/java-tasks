@@ -26,11 +26,11 @@ public class TestRunner {
         };
         costsForTest = new Byn[]{
                 new Byn(500),
-                new Byn(280),
-                new Byn(180),
-                new Byn(180),
-                new Byn(1020),
-                new Byn(1740)
+                new Byn(200),
+                new Byn(700),
+                new Byn(1200),
+                new Byn(1000),
+                new Byn(1700)
         };
     }
 
@@ -88,11 +88,11 @@ public class TestRunner {
         };
         Byn[] costs = {
                 new Byn(500),
-                new Byn(280),
-                new Byn(180),
-                new Byn(180),
-                new Byn(1020),
-                new Byn(1740)
+                new Byn(200),
+                new Byn(700),
+                new Byn(1200),
+                new Byn(1000),
+                new Byn(1700)
         };
         for (int i = 0; i < purchasesForTest.length; i++) {
             if (purchases[i].compareTo(purchasesForTest[i]) != 0 || costs[i].compareTo(costsForTest[i]) != 0) {
@@ -106,8 +106,8 @@ public class TestRunner {
     public void testSearch() {
         boolean result = true;
         Arrays.sort(purchasesForTest);
-        int firstIndex = Arrays.binarySearch(purchasesForTest, new PriceDiscountPurchase("Product name", new Byn(1740), 1, new Byn(0)));
-        int secondIndex = Arrays.binarySearch(purchasesForTest, new PriceDiscountPurchase("Product name", new Byn(180), 1, new Byn(0)));
+        int firstIndex = Arrays.binarySearch(purchasesForTest, new PriceDiscountPurchase("Product name", new Byn(1700), 1, new Byn(0)));
+        int secondIndex = Arrays.binarySearch(purchasesForTest, new PriceDiscountPurchase("Product name", new Byn(200), 1, new Byn(0)));
         int thirdIndex = Arrays.binarySearch(purchasesForTest, new PriceDiscountPurchase("Product name", new Byn(1), 1, new Byn(0)));
         if (firstIndex > -1 && secondIndex > -1 && thirdIndex <= -1) {
             System.out.println("Some purchase with cost equalled to 17.40 BYN: " + purchasesForTest[firstIndex]);
