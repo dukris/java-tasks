@@ -18,8 +18,8 @@ public class PriceDiscountPurchase extends AbstractPurchase {
     }
 
     @Override
-    public Byn getCost() {
-        return new Byn((getProduct().getPrice().sub(discount)).mul(getNumber()));
+    protected Byn getFinalCost(Byn baseCost) {
+        return baseCost.sub(discount.mul(getNumber()));
     }
 
     @Override

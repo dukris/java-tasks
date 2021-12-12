@@ -16,7 +16,7 @@ public class FarePurchase extends AbstractPurchase{
     }
 
     @Override
-    public Byn getCost() {
-        return new Byn(super.getCost().add(FARE));
+    protected Byn getFinalCost(Byn baseCost) {
+        return baseCost.add(FARE);
     }
 }

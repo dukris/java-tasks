@@ -40,6 +40,10 @@ public class Byn implements Comparable<Byn> {
         return new Byn(value);
     }
 
+    public Byn round(RoundMethod roundMethod, int d) {
+        return new Byn(roundMethod.round(value, d));
+    }
+
     @Override
     public String toString() {
         return String.format("%d.%02d", getRubs(), getCoins());
