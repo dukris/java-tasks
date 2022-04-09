@@ -1,0 +1,214 @@
+/*!* Указываем box sizing *!*/
+/**,*/
+/**::before,*/
+/**::after {*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*!* Убираем внутренние отступы *!*/
+/*ul[class],*/
+/*ol[class] {*/
+/*    padding: 0;*/
+/*}*/
+
+/*!* Убираем внешние отступы *!*/
+/*body,*/
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*p,*/
+/*ul[class],*/
+/*ol[class],*/
+/*li,*/
+/*figure,*/
+/*figcaption,*/
+/*blockquote,*/
+/*dl,*/
+/*dd {*/
+/*    margin: 0;*/
+/*}*/
+
+/*!* Выставляем основные настройки по-умолчанию для body *!*/
+/*body {*/
+/*    min-height: 100vh;*/
+/*    scroll-behavior: smooth;*/
+/*    text-rendering: optimizeSpeed;*/
+/*    line-height: 1.5;*/
+/*}*/
+
+/*!* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*!*/
+/*ul[class],*/
+/*ol[class] {*/
+/*    list-style: none;*/
+/*}*/
+
+/*!* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей *!*/
+/*a:not([class]) {*/
+/*    text-decoration-skip-ink: auto;*/
+/*}*/
+
+/*!* Упрощаем работу с изображениями *!*/
+/*img {*/
+/*    max-width: 100%;*/
+/*    display: block;*/
+/*}*/
+
+/*!* Указываем понятную периодичность в потоке данных у article*!*/
+/*article > * + * {*/
+/*    margin-top: 1em;*/
+/*}*/
+
+/*!* Наследуем шрифты для инпутов и кнопок *!*/
+/*input,*/
+/*button,*/
+/*textarea,*/
+/*select {*/
+/*    font: inherit;*/
+/*}*/
+
+/*!* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать *!*/
+/*@media (prefers-reduced-motion: reduce) {*/
+/*    * {*/
+/*        animation-duration: 0.01ms !important;*/
+/*        animation-iteration-count: 1 !important;*/
+/*        transition-duration: 0.01ms !important;*/
+/*        scroll-behavior: auto !important;*/
+/*    }*/
+/*}*/
+
+/*!*-------------------------------------------------*!*/
+/*li {*/
+/*    list-style-type: none; !* Убираем маркеры *!*/
+/*}*/
+
+body{
+    background: url("static/images/background.jpg");
+}
+.logo{
+    height: 150px;
+    width: 150px;
+}
+
+/*#lang, #lang li {*/
+/*    margin: 0; !* убрать внутренние отступы *!*/
+/*    padding: 0; !* убрать внешние отступы *!*/
+/*}*/
+
+
+/*#lang li{*/
+/*    display:inline-block; !* расположить пункты горизонтально *!*/
+/*    text-align: center; !* текст горизонтально по центру *!*/
+/*    position: absolute;*/
+/*    top: 5px;*/
+/*    right: 30px;*/
+/*}*/
+
+/*#text, text li{*/
+/*    padding: 11% 0 0 0;*/
+/*}*/
+
+/*#text li{*/
+/*    position: static;*/
+/*    margin-left: 42%;*/
+/*}*/
+
+
+/*.border-button {*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    padding: 20px 30px;*/
+/*    margin: 10px 20px;*/
+/*    position: relative;*/
+/*    color: white;*/
+/*    border: 1px solid rgba(255, 255, 255, .4);*/
+/*    background: none;*/
+/*    font-weight: 300;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    text-transform: uppercase;*/
+/*    letter-spacing: 2px;*/
+/*}*/
+/*.border-button:before, .border-button:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    opacity: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*.border-button:before {*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    border-left: 1px solid white;*/
+/*    border-top: 1px solid white;*/
+/*    transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;*/
+/*}*/
+/*.border-button:after {*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    border-right: 1px solid white;*/
+/*    border-bottom: 1px solid white;*/
+/*    transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;*/
+/*}*/
+/*.border-button:hover:before,*/
+/*.border-button:hover:after {*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    opacity: 1;*/
+/*}*/
+/*.border-button:hover:before {*/
+/*    transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;*/
+/*}*/
+/*.border-button:hover:after {*/
+/*    transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;*/
+/*}*/
+/*.border-button:hover {*/
+/*    background: rgba(255, 255, 255, .2);*/
+/*}*/
+/*.bg {*/
+/*    background-image: url("static/images/background.jpg");*/
+/*    height: 500%;*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+/*.double-border-button {*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    margin: 10px 20px;*/
+/*    padding: 10px 30px;*/
+/*    position: relative;*/
+/*    border: 2px solid white;*/
+/*    color: white;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    transition: .4s;*/
+/*}*/
+/*.double-border-button:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    margin: auto;*/
+/*    border: 2px solid rgba(0, 0, 0, 0);*/
+/*    transition: .4s;*/
+/*}*/
+/*.double-border-button:hover:after {*/
+/*    border-color: deeppink;*/
+/*    width: calc(100% - 10px);*/
+/*    height: calc(100% + 10px);*/
+/*}*/
+
+/*#reg{*/
+/*    position: relative;*/
+/*    left: 208px;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    color: white;*/
+/*}*/
+
+/*.wel{*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*}*/
